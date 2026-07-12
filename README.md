@@ -48,7 +48,7 @@ This project trains an AI to look at a satellite image and classify the land typ
 
 ---
 
-## 🧠 Techniques Applied (Explained for Beginners)
+## 🧠 Techniques Applied 
 
 ### What is Transfer Learning?
 Instead of training a neural network from scratch (which takes millions of images and days of GPU time), we start from a model that was already trained on **ImageNet** — a dataset of 1.2 million natural photos.
