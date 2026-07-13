@@ -24,7 +24,7 @@ This project demonstrates a complete ML pipeline: data loading, training (two‑
 | **Macro F1** | 93.47% |
 | **Weighted F1** | 93.51% |
 | **Macro Recall** | 93.46% |
-| **Training Time** (5 epochs) | ~8.1 hours (CPU) |
+| **Training Time** (30 epochs) | ~8.1 hours (CPU) |
 
 > The model was trained with EfficientNet‑B0 for only 5 epochs (warmup + fine‑tuning) and achieves state‑of‑the‑art performance on the EuroSAT benchmark.
 
@@ -132,7 +132,7 @@ Softmax → Class Probabilities
 - Only **5.3M parameters** (vs 25M for ResNet50)
 - **~3× fewer operations** than ResNet50
 - Better accuracy with faster training
-- CPU-friendly: ~2.5 hours for 30 epochs
+- CPU-friendly: ~8.5 hours for 30 epochs
 
 ---
 
@@ -221,13 +221,7 @@ Open `http://localhost:8501` in your browser.
 
 ---
 
-## 📈 Results in Detail
 
-### Training Curves (5 Epochs)
-- **Best Val Accuracy:** 93.65% (achieved at epoch 4)
-- **Best Train Accuracy:** 89.95%
-- **Total Epochs:** 5
-- **Training Time:** ~8.1 hours on CPU
 
 ### Confusion Matrix Highlights
 The model performs well across all classes. Most confusion occurs between visually similar classes:
