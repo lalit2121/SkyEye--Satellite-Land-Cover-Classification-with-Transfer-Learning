@@ -227,7 +227,7 @@ Open `http://localhost:8501` in your browser.
 - **Best Val Accuracy:** 93.65% (achieved at epoch 4)
 - **Best Train Accuracy:** 89.95%
 - **Total Epochs:** 5
-- **Training Time:** ~1.1 hours on CPU
+- **Training Time:** ~8.1 hours on CPU
 
 ### Confusion Matrix Highlights
 The model performs well across all classes. Most confusion occurs between visually similar classes:
@@ -251,41 +251,6 @@ The model performs well across all classes. Most confusion occurs between visual
 | SeaLake | ~96% | ~97% | ~96% | ~2,700 |
 
 > **Forest** and **SeaLake** are the easiest classes (clear visual signatures). **HerbaceousVegetation** and **Pasture** are the most challenging (visually similar).
-
----
-
-## 🔄 Architecture Comparison
-
-| Model | Parameters | Expected Val Acc | CPU Train Time | Best For |
-|-------|-----------|------------------|----------------|----------|
-| **MobileNetV3** | 2.5M | ~86% | ~1.5h | Edge devices, speed |
-| **EfficientNet-B0** | 5.3M | **~92%** | **~2.5h** | **Best accuracy/speed** |
-| **ResNet50** | 25.6M | ~90% | ~4h | Research, deeper analysis |
-| **ViT-Tiny** | 5.7M | ~88% | ~5h | Transformer experiments |
-
-> **Recommendation:** Start with `efficientnet_b0` for best results. Use `mobilenet_v3` for quick prototyping.
-
----
-
-## 🔍 Grad-CAM: "Show Me Where You Looked"
-
-Grad-CAM creates a heatmap showing which pixels influenced the model's decision.
-
-```python
-from gradcam import GradCAM
-from classifier import load_model
-
-model, _ = load_model("results/models/best_model.pth")
-gradcam = GradCAM(model, target_layer=model.backbone[-2])
-heatmap, predicted_class, confidence = gradcam(image_tensor)
-# Overlay heatmap on original image
-gradcam.remove_hooks()  # Always clean up!
-```
-
-**Why this matters:**
-- ✅ **Debugging:** Is the model looking at the road or the sky?
-- ✅ **Trust:** Users can verify the model uses the right features
-- ✅ **Science:** Reveals what visual patterns distinguish land types
 
 ---
 
