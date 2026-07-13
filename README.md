@@ -1,5 +1,10 @@
 # 🛰️ EuroSAT Land Use Classification
 
+## Preview 
+![Preview](poster_satml.png)
+
+
+
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-green.svg)](https://streamlit.io/)
