@@ -1,4 +1,4 @@
-# 🛰️ EuroSAT Land Use Classification
+# 🛰️SkyEye:Satellite Land Cover Classification with Transfer-Learning
 
 ## Preview 
 ![Preview](poster_satml.png)
